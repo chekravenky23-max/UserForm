@@ -42,7 +42,7 @@ app.get('/health', async (req, res) => {
     }
 });
 
-app.listen(PORT, async () => {
+app.listen(PORT, "0.0.0.0", async () => {
     console.log(`Server is running on port ${PORT}`);
     try {
         await prisma.$connect();
